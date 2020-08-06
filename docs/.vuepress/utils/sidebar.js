@@ -24,6 +24,26 @@ module.exports = {
       ],
     },
   ],
+  "/programtech/": [
+    {
+      title: "数据结构和算法", // 必要的,分组名称
+      path: "/programtech/ds&al/", // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+      collapsable: false, // 可选的, 默认值是 true,
+      sidebarDepth: 2, // 可选的, 默认值是 1
+      children: [
+        "/programtech/ds&al/notes/letcode.md",
+      ], // 每写一个md在这里添加
+    },
+    {
+      title: "计算机网络",
+      path: "/programtech/http/",
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        "/",
+      ],
+    },
+  ],
   "/base/": [
     {
       title: "javascript",
