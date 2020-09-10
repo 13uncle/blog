@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>let &amp; const | 十三叔叔</title>
+    <meta name="generator" content="VuePress 1.5.3">
+    <link rel="icon" href="/blog/images/favicon.ico">
+    <meta name="description" content="生命在于记录">
+    <link rel="preload" href="/blog/assets/css/0.styles.45483ba5.css" as="style"><link rel="preload" href="/blog/assets/js/app.1ffed8ab.js" as="script"><link rel="preload" href="/blog/assets/js/2.8599568f.js" as="script"><link rel="preload" href="/blog/assets/js/42.8088c75a.js" as="script"><link rel="prefetch" href="/blog/assets/js/10.a0a5bc84.js"><link rel="prefetch" href="/blog/assets/js/11.f6489024.js"><link rel="prefetch" href="/blog/assets/js/12.d9f073d2.js"><link rel="prefetch" href="/blog/assets/js/13.7e82a4d6.js"><link rel="prefetch" href="/blog/assets/js/14.d8babfe7.js"><link rel="prefetch" href="/blog/assets/js/15.e21a4da2.js"><link rel="prefetch" href="/blog/assets/js/16.6ff1b66c.js"><link rel="prefetch" href="/blog/assets/js/17.f5a6dbe2.js"><link rel="prefetch" href="/blog/assets/js/18.d2352821.js"><link rel="prefetch" href="/blog/assets/js/19.922d31d0.js"><link rel="prefetch" href="/blog/assets/js/20.5010f9a7.js"><link rel="prefetch" href="/blog/assets/js/21.bc5f4d9c.js"><link rel="prefetch" href="/blog/assets/js/22.45c9029d.js"><link rel="prefetch" href="/blog/assets/js/23.b798db81.js"><link rel="prefetch" href="/blog/assets/js/24.70e03241.js"><link rel="prefetch" href="/blog/assets/js/25.3cb1960e.js"><link rel="prefetch" href="/blog/assets/js/26.92ec6abb.js"><link rel="prefetch" href="/blog/assets/js/27.eeb62384.js"><link rel="prefetch" href="/blog/assets/js/28.311e129e.js"><link rel="prefetch" href="/blog/assets/js/29.8e9ecd4b.js"><link rel="prefetch" href="/blog/assets/js/3.5c9a2e9b.js"><link rel="prefetch" href="/blog/assets/js/30.2033ec15.js"><link rel="prefetch" href="/blog/assets/js/31.eff3d99d.js"><link rel="prefetch" href="/blog/assets/js/32.7e15a2f8.js"><link rel="prefetch" href="/blog/assets/js/33.d9f0850e.js"><link rel="prefetch" href="/blog/assets/js/34.d6a86089.js"><link rel="prefetch" href="/blog/assets/js/35.5e8c119f.js"><link rel="prefetch" href="/blog/assets/js/36.c0625c46.js"><link rel="prefetch" href="/blog/assets/js/37.c2f8b7b8.js"><link rel="prefetch" href="/blog/assets/js/38.441114c6.js"><link rel="prefetch" href="/blog/assets/js/39.16e7dd6c.js"><link rel="prefetch" href="/blog/assets/js/4.80c5d977.js"><link rel="prefetch" href="/blog/assets/js/40.bc297529.js"><link rel="prefetch" href="/blog/assets/js/41.329f4319.js"><link rel="prefetch" href="/blog/assets/js/43.174b84c2.js"><link rel="prefetch" href="/blog/assets/js/44.dfffce15.js"><link rel="prefetch" href="/blog/assets/js/45.e868ccd9.js"><link rel="prefetch" href="/blog/assets/js/46.2b0eae6c.js"><link rel="prefetch" href="/blog/assets/js/47.32234599.js"><link rel="prefetch" href="/blog/assets/js/48.0ad8cd90.js"><link rel="prefetch" href="/blog/assets/js/49.65dfba77.js"><link rel="prefetch" href="/blog/assets/js/5.ca49605f.js"><link rel="prefetch" href="/blog/assets/js/50.5d29e810.js"><link rel="prefetch" href="/blog/assets/js/51.13c6a30b.js"><link rel="prefetch" href="/blog/assets/js/52.4537882d.js"><link rel="prefetch" href="/blog/assets/js/53.cfe86c49.js"><link rel="prefetch" href="/blog/assets/js/54.86441d00.js"><link rel="prefetch" href="/blog/assets/js/55.88e57ee2.js"><link rel="prefetch" href="/blog/assets/js/56.4257304c.js"><link rel="prefetch" href="/blog/assets/js/57.717f2133.js"><link rel="prefetch" href="/blog/assets/js/58.4d19f088.js"><link rel="prefetch" href="/blog/assets/js/59.2c0f7d71.js"><link rel="prefetch" href="/blog/assets/js/6.57e3407c.js"><link rel="prefetch" href="/blog/assets/js/7.330f9965.js"><link rel="prefetch" href="/blog/assets/js/8.037b705c.js"><link rel="prefetch" href="/blog/assets/js/9.3d3c68b2.js">
+    <link rel="stylesheet" href="/blog/assets/css/0.styles.45483ba5.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/blog/" class="home-link router-link-active"><img src="/blog/images/hero.png" alt="十三叔叔" class="logo"> <span class="site-name can-hide">十三叔叔</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书" class="dropdown-title"><span class="title">读书</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/reading/professionaljs/" class="nav-link">
+  javascript高级程序设计
+</a></li><li class="dropdown-item"><!----> <a href="/blog/reading/ecmascript6/" class="nav-link router-link-active">
+  ES6标准入门
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="马车&amp;板斧" class="dropdown-title"><span class="title">马车&amp;板斧</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/base/js/" class="nav-link">
+  javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/base/css/" class="nav-link">
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/blog/base/html/" class="nav-link">
+  html
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/vue/principle/" class="nav-link">
+  Vue原理实现
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/vueuse/" class="nav-link">
+  Vue使用
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="React" class="dropdown-title"><span class="title">React</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/react/redux/" class="nav-link">
+  Redux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/reactrouter/" class="nav-link">
+  React-router
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tool/webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/npm/" class="nav-link">
+  Npm
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机知识" class="dropdown-title"><span class="title">计算机知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/programtech/ds&amp;al/" class="nav-link">
+  数据结构和算法
+</a></li><li class="dropdown-item"><!----> <a href="/blog/programtech/http/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/blog/programtech/jianzhioffer/" class="nav-link">
+  剑指offer
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="面试" class="dropdown-title"><span class="title">面试</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/interview/total/" class="nav-link">
+  面试题汇总
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/13uncle" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="读书" class="dropdown-title"><span class="title">读书</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/reading/professionaljs/" class="nav-link">
+  javascript高级程序设计
+</a></li><li class="dropdown-item"><!----> <a href="/blog/reading/ecmascript6/" class="nav-link router-link-active">
+  ES6标准入门
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="马车&amp;板斧" class="dropdown-title"><span class="title">马车&amp;板斧</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/base/js/" class="nav-link">
+  javascript
+</a></li><li class="dropdown-item"><!----> <a href="/blog/base/css/" class="nav-link">
+  css
+</a></li><li class="dropdown-item"><!----> <a href="/blog/base/html/" class="nav-link">
+  html
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="Vue" class="dropdown-title"><span class="title">Vue</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/vue/principle/" class="nav-link">
+  Vue原理实现
+</a></li><li class="dropdown-item"><!----> <a href="/blog/vue/vueuse/" class="nav-link">
+  Vue使用
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="React" class="dropdown-title"><span class="title">React</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/react/redux/" class="nav-link">
+  Redux
+</a></li><li class="dropdown-item"><!----> <a href="/blog/react/reactrouter/" class="nav-link">
+  React-router
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="工具" class="dropdown-title"><span class="title">工具</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/tool/webpack/" class="nav-link">
+  Webpack
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/git/" class="nav-link">
+  Git
+</a></li><li class="dropdown-item"><!----> <a href="/blog/tool/npm/" class="nav-link">
+  Npm
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="计算机知识" class="dropdown-title"><span class="title">计算机知识</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/programtech/ds&amp;al/" class="nav-link">
+  数据结构和算法
+</a></li><li class="dropdown-item"><!----> <a href="/blog/programtech/http/" class="nav-link">
+  计算机网络
+</a></li><li class="dropdown-item"><!----> <a href="/blog/programtech/jianzhioffer/" class="nav-link">
+  剑指offer
+</a></li></ul></div></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="面试" class="dropdown-title"><span class="title">面试</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/blog/interview/total/" class="nav-link">
+  面试题汇总
+</a></li></ul></div></div><div class="nav-item"><a href="https://github.com/13uncle" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/blog/reading/professionaljs/" class="sidebar-heading clickable"><span>javascript高级程序设计</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/reading/professionaljs/notes/pjs_20200806_1.html" class="sidebar-link">使用&lt;script&gt;标签</a></li><li><a href="/blog/reading/professionaljs/notes/pjs_20200806_2.html" class="sidebar-link">类型检测</a></li><li><a href="/blog/reading/professionaljs/notes/pjs_20200806_3.html" class="sidebar-link">基本类型</a></li><li><a href="/blog/reading/professionaljs/notes/pjs_20200806_4.html" class="sidebar-link">值类型</a></li><li><a href="/blog/reading/professionaljs/notes/pjs_20200806_5.html" class="sidebar-link">操作符</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/blog/reading/ecmascript6/" class="sidebar-heading clickable router-link-active open"><span>ES6标准入门</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/blog/reading/ecmascript6/notes/es_20200806_1.html" class="sidebar-link">ES6 简介</a></li><li><a href="/blog/reading/ecmascript6/notes/es_20200806_2.html" aria-current="page" class="active sidebar-link">let &amp; const</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/reading/ecmascript6/notes/es_20200806_2.html#块级作用域" class="sidebar-link">块级作用域</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/reading/ecmascript6/notes/es_20200806_2.html#es5中没有块级作用域" class="sidebar-link">ES5中没有块级作用域</a></li><li class="sidebar-sub-header"><a href="/blog/reading/ecmascript6/notes/es_20200806_2.html#es6的块级作用域" class="sidebar-link">ES6的块级作用域</a></li><li class="sidebar-sub-header"><a href="/blog/reading/ecmascript6/notes/es_20200806_2.html#块级作用域中的函数声明" class="sidebar-link">块级作用域中的函数声明</a></li><li class="sidebar-sub-header"><a href="/blog/reading/ecmascript6/notes/es_20200806_2.html#do表达式" class="sidebar-link">do表达式</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/reading/ecmascript6/notes/es_20200806_2.html#let" class="sidebar-link">let</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/reading/ecmascript6/notes/es_20200806_2.html#老生常谈的for循环" class="sidebar-link">老生常谈的for循环</a></li><li class="sidebar-sub-header"><a href="/blog/reading/ecmascript6/notes/es_20200806_2.html#没有变量提升" class="sidebar-link">没有变量提升</a></li><li class="sidebar-sub-header"><a href="/blog/reading/ecmascript6/notes/es_20200806_2.html#不能重复声明" class="sidebar-link">不能重复声明</a></li><li class="sidebar-sub-header"><a href="/blog/reading/ecmascript6/notes/es_20200806_2.html#暂时性死区" class="sidebar-link">暂时性死区</a></li></ul></li><li class="sidebar-sub-header"><a href="/blog/reading/ecmascript6/notes/es_20200806_2.html#const" class="sidebar-link">const</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/blog/reading/ecmascript6/notes/es_20200806_2.html#真正的冻结对象" class="sidebar-link">真正的冻结对象</a></li><li class="sidebar-sub-header"><a href="/blog/reading/ecmascript6/notes/es_20200806_2.html#const使用" class="sidebar-link">const使用</a></li></ul></li></ul></li><li><a href="/blog/reading/ecmascript6/notes/es_20200831.html" class="sidebar-link">解构赋值</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="let-const"><a href="#let-const" class="header-anchor">#</a> let &amp; const</h1> <h2 id="块级作用域"><a href="#块级作用域" class="header-anchor">#</a> 块级作用域</h2> <h3 id="es5中没有块级作用域"><a href="#es5中没有块级作用域" class="header-anchor">#</a> ES5中没有块级作用域</h3> <p>ES5中只有全局作用域和函数作用域，没有块级作用域的概念（如果有，也是通过立即执行函数模拟的），因此存在一些不合理的应用场景。</p> <ol><li><p>内层变量可能覆盖外层变量</p> <p>ES5中，使用<code>var</code>声明变量，会导致变量提升，提升到包含它的全局作用域或者函数作用域上方。这导致，外层如果定义了相同名称的变量，将会被内层同名变量覆盖。</p></li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+	name<span class="token operator">:</span> <span class="token string">&quot;Lei&quot;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		<span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token string">&quot;Lei&quot;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// undefined</span>
+</code></pre></div><p>上述代码可以转换为：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+	name<span class="token operator">:</span> <span class="token string">&quot;Lei&quot;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">var</span> obj
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
+	<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		obj <span class="token operator">=</span> <span class="token string">&quot;Lei&quot;</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// undefined</span>
+</code></pre></div><ol start="2"><li><p>for循环中的循环变量泄露为外层作用域中的变量（十分常见）</p> <p>ES5中，有如下代码：</p></li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Lei'</span><span class="token punctuation">,</span><span class="token string">'Vic'</span><span class="token punctuation">,</span><span class="token string">'Vicvi'</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>names<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>names<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token comment">// 3</span>
+</code></pre></div><p>上述代码可以转换为：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> names <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Lei'</span><span class="token punctuation">,</span><span class="token string">'Vic'</span><span class="token punctuation">,</span><span class="token string">'Vicvi'</span><span class="token punctuation">]</span>
+<span class="token keyword">var</span> i
+<span class="token keyword">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span>names<span class="token punctuation">.</span>length<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>names<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token comment">// 3</span>
+</code></pre></div><p>这块使用作用域的知识可以解释，由于<code>var</code>定义的循环变量<code>i</code>提升到全局作用域，当在for循环后打印<code>i</code>时，循环已经结束，变量<code>i</code>保存的是最终值，所以<code>console.log()</code>在全局作用域中找到了<code>i</code>，并打印出循环变量的终值。</p> <h3 id="es6的块级作用域"><a href="#es6的块级作用域" class="header-anchor">#</a> ES6的块级作用域</h3> <ol><li>块级作用域可以任意嵌套</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">'Lei'</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre></div><ol start="2"><li>外层作用域无法访问内层作用域中的变量</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+	<span class="token punctuation">{</span> <span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">'Lei'</span> <span class="token punctuation">}</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token comment">// 报错</span>
+<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre></div><ol start="3"><li>内层作用域可以定义外层作用域的同名变量</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span><span class="token punctuation">{</span><span class="token punctuation">{</span>
+	<span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">'Vic'</span>
+	<span class="token punctuation">{</span> <span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">'Lei'</span> <span class="token punctuation">}</span> <span class="token comment">// 各自在自己的块级作用域内有效</span>
+<span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">}</span>
+</code></pre></div><ol start="4"><li>不需要立即执行函数来模拟块级作用域了，直接使用<code>{}</code>便可定义一个块级作用域</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span>
+	<span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">'Lei'</span>
+	···
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="块级作用域中的函数声明"><a href="#块级作用域中的函数声明" class="header-anchor">#</a> 块级作用域中的函数声明</h3> <p>由于环境差异，块级作用域中的函数声明将体现出不同的执行结果。<strong>因此，不管是ES5还是ES6，都不建议把函数声明写在块级作用域中</strong>。</p> <p>如确实需要，可以写成函数表达式的形式：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span>
+	<span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">'Lei'</span>
+    <span class="token keyword">let</span> <span class="token function-variable function">f</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="do表达式"><a href="#do表达式" class="header-anchor">#</a> do表达式</h3> <p>块级作用域是一个语句，并<strong>没有返回值</strong>。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span>
+	<span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token number">1</span>
+	x <span class="token operator">=</span> x<span class="token operator">+</span><span class="token number">1</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>我们无法拿到这个块级作用域中<code>x</code>的值。除非<code>x</code>是全局变量。</p> <p>我们可以使用do表达式，就是在块级作用域前，加上<code>do</code>，使它变为表达式。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>t <span class="token operator">=</span> <span class="token keyword">do</span> <span class="token punctuation">{</span>
+	<span class="token keyword">let</span> x <span class="token operator">=</span> <span class="token number">1</span>
+	x <span class="token operator">=</span> x<span class="token operator">+</span><span class="token number">1</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>t<span class="token punctuation">)</span> <span class="token comment">// 2</span>
+</code></pre></div><h2 id="let"><a href="#let" class="header-anchor">#</a> let</h2> <p>与<code>var</code>类似，用于声明变量，但是<code>let</code>声明的变量只在代码块中有效。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span>
+	<span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">1</span>
+	<span class="token keyword">var</span> b <span class="token operator">=</span> <span class="token number">2</span>
+<span class="token punctuation">}</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span> <span class="token comment">// a is not defined</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span> <span class="token comment">// 2</span>
+</code></pre></div><h3 id="老生常谈的for循环"><a href="#老生常谈的for循环" class="header-anchor">#</a> 老生常谈的for循环</h3> <p>ES5中：产生这种结果的原因就不说了，上面已经做过说明。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">var</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">10</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 10</span>
+</code></pre></div><p>ES6中：</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">10</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	a<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">function</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+		console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+a<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 1</span>
+</code></pre></div><p>虽然玄幻变量<code>i</code>在循环过程中，只在本轮有效。但是javascript会在引擎内部记录上一轮循环的值，并用于本轮变量<code>i</code>的计算。所以在调用函数时，可以正确打印出<code>i</code>的值。</p> <p><strong>注意</strong></p> <p>for循环还有一个特别之处，就是<strong>设置循环变量的部分是一个父作用域，循环体内是一个单独的子作用域</strong>！</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">&lt;</span><span class="token number">3</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">let</span> i <span class="token operator">=</span> <span class="token string">'Lei'</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+<span class="token comment">// 会打印3次‘Lei’</span>
+</code></pre></div><h3 id="没有变量提升"><a href="#没有变量提升" class="header-anchor">#</a> 没有变量提升</h3> <p><code>let</code>声明的变量，不会进行变量提升，因此在变量声明之前使用变量，会报错。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code>console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token comment">// 报错</span>
+<span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">'Lei'</span>
+</code></pre></div><h3 id="不能重复声明"><a href="#不能重复声明" class="header-anchor">#</a> 不能重复声明</h3> <p><code>let</code>不允许在相同作用域内重复声明变量。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token punctuation">{</span>
+	<span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">1</span>
+	<span class="token keyword">var</span> a <span class="token operator">=</span> <span class="token number">10</span>
+<span class="token punctuation">}</span><span class="token comment">// 报错</span>
+
+<span class="token punctuation">{</span>
+	<span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">1</span>
+	<span class="token keyword">let</span> a <span class="token operator">=</span> <span class="token number">10</span>
+<span class="token punctuation">}</span><span class="token comment">// 报错</span>
+</code></pre></div><p><strong>因此在函数体内，不允许对参数重新声明！</strong></p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">'Lei'</span> <span class="token comment">// 报错</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span><span class="token punctuation">(</span><span class="token parameter">name</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token punctuation">{</span>
+		<span class="token keyword">let</span> name <span class="token operator">=</span> <span class="token string">'Lei'</span> <span class="token comment">// 不报错</span>
+	<span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="暂时性死区"><a href="#暂时性死区" class="header-anchor">#</a> 暂时性死区</h3> <p>暂时性死区是指，在当前作用域，所要使用的变量已经存在，但是不能获取，只有等到变量声明的那一行，变量才可使用。</p> <p>如果区块中存在<code>let</code>和<code>const</code>声明的变量，那么在<strong>这个作用域中</strong>且在<strong>声明之前</strong>，就无法使用这个变量。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">if</span><span class="token punctuation">(</span><span class="token boolean">true</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	name <span class="token operator">=</span> <span class="token string">'Lei'</span> <span class="token comment">// ReferenceError</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token comment">// 报错</span>
+	
+	<span class="token keyword">let</span> name
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token comment">// undefined</span>
+	
+	name <span class="token operator">=</span> <span class="token string">'Lei'</span>
+	console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>name<span class="token punctuation">)</span> <span class="token comment">// Lei</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p><strong>注意</strong></p> <ol><li>在如下情况中，也会产生暂时性死区</li></ol> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">f</span><span class="token punctuation">(</span><span class="token parameter">x<span class="token operator">=</span>y<span class="token punctuation">,</span>y<span class="token operator">=</span><span class="token number">2</span></span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	<span class="token keyword">return</span> <span class="token punctuation">[</span>x<span class="token punctuation">,</span>y<span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+<span class="token function">f</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">// 报错，给参数x赋初值y,然而y此时还未声明，所以报错。</span>
+
+<span class="token keyword">let</span> x <span class="token operator">=</span> x <span class="token comment">// x is not defined，x的声明语句还未完成，就尝试获取x的值，所以会出现错误</span>
+</code></pre></div><h2 id="const"><a href="#const" class="header-anchor">#</a> const</h2> <p><code>const</code>用于声明一个只读的常量，一旦声明，值就不能改变。</p> <p>实际上，<code>const</code>并不是保证变量的值不能变动，而是变量指向值得那个内存地址不能变动。</p> <ul><li>​	对于简单类型而言，值就保存在内存地址中。</li> <li>​	对于引用类型而言，内存地址中只是保存的指向引用对象的指针，const并不能保证引用对象的内部数据不   发生改变</li></ul> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> <span class="token constant">PI</span> <span class="token operator">=</span> <span class="token number">3.14</span>
+<span class="token constant">PI</span> <span class="token operator">=</span> <span class="token number">3</span> <span class="token comment">// 报错</span>
+
+<span class="token comment">// 数组</span>
+<span class="token keyword">const</span> name <span class="token operator">=</span> <span class="token punctuation">[</span>
+	<span class="token string">'Lei'</span><span class="token punctuation">,</span>
+	<span class="token string">'Vic'</span>
+<span class="token punctuation">]</span>
+name<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token string">'Vicvi'</span><span class="token punctuation">)</span> <span class="token comment">// ['Lei','Vic','Vicvi']</span>
+name <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token comment">// 报错，name指向另一个数组</span>
+
+<span class="token comment">// 对象</span>
+<span class="token keyword">const</span> data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token comment">// 为对象添加属性可以成功</span>
+data<span class="token punctuation">.</span>name <span class="token operator">=</span> <span class="token string">'Lei'</span>
+data<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">18</span>
+data <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span> <span class="token comment">// 报错，data指向另一个对象</span>
+</code></pre></div><h3 id="真正的冻结对象"><a href="#真正的冻结对象" class="header-anchor">#</a> 真正的冻结对象</h3> <p>可以使用Object.freeze(obj)</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">const</span> obj <span class="token operator">=</span> <span class="token punctuation">{</span>
+	name<span class="token operator">:</span> <span class="token string">'Lei'</span><span class="token punctuation">,</span>
+	age<span class="token operator">:</span> <span class="token number">18</span>
+<span class="token punctuation">}</span>
+Object<span class="token punctuation">.</span><span class="token function">freeze</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
+
+obj<span class="token punctuation">.</span>age <span class="token operator">=</span> <span class="token number">20</span> <span class="token comment">// 标准模式，该语句无效；严格模式，报错</span>
+</code></pre></div><p>然而上面这种情况，只是保证对象及其属性不可修改，如果对象属性值仍未对象，还是可以修改这个<code>obj</code>对象的，因此可以使用下面这个函数，彻底冻结对象。</p> <div class="language-javascript extra-class"><pre class="language-javascript"><code><span class="token keyword">function</span> <span class="token function">constantize</span> <span class="token punctuation">(</span><span class="token parameter">obj</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+	Object<span class="token punctuation">.</span><span class="token function">freeze</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span>
+	Object<span class="token punctuation">.</span><span class="token function">keys</span><span class="token punctuation">(</span>obj<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">forEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token parameter">key<span class="token punctuation">,</span>value</span><span class="token punctuation">)</span><span class="token operator">=&gt;</span><span class="token punctuation">{</span>
+		<span class="token keyword">if</span><span class="token punctuation">(</span><span class="token keyword">typeof</span> obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">===</span> <span class="token string">'object'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
+			<span class="token function">constantize</span><span class="token punctuation">(</span>obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">)</span>
+		<span class="token punctuation">}</span>
+	<span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h3 id="const使用"><a href="#const使用" class="header-anchor">#</a> const使用</h3> <p><code>const</code>和<code>let</code>具有相似的使用特性：</p> <ol><li><strong>const一旦声明，就必须初始化</strong>；</li> <li>只在块级作用域内有效</li> <li>不会发生变量提升</li> <li>具有暂时性死区</li> <li>不能重复声明</li></ol></div> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">更新时间:</span> <span class="time">2020-08-06 12:05:34</span></div></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/blog/reading/ecmascript6/notes/es_20200806_1.html" class="prev">
+        ES6 简介
+      </a></span> <span class="next"><a href="/blog/reading/ecmascript6/notes/es_20200831.html">
+        解构赋值
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/blog/assets/js/app.1ffed8ab.js" defer></script><script src="/blog/assets/js/2.8599568f.js" defer></script><script src="/blog/assets/js/42.8088c75a.js" defer></script>
+  </body>
+</html>
