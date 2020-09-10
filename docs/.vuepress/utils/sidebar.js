@@ -88,4 +88,15 @@ module.exports = {
       children: ["/"],
     },
   ],
+  "/interview/": [
+    {
+      title: "面试题汇总", // 必要的,分组名称
+      path: "/interview/total/", // 可选的, 标题的跳转链接，应为绝对路径且必须存在
+      collapsable: false, // 可选的, 默认值是 true,
+      sidebarDepth: 2, // 可选的, 默认值是 1
+      children: [
+        "/interview/total/notes/total.md"
+      ], // 每写一个md在这里添加
+    }
+  ],
 };

@@ -54,6 +54,9 @@ module.exports = [
   {
     text: "面试",
     link: "/interview/",
+    items: [
+      { text: "面试题汇总", link: "/interview/total/" },
+    ],
   },
   {
     text: "Github",
