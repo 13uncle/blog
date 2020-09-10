@@ -21,6 +21,7 @@ module.exports = {
       children: [
         "/reading/ecmascript6/notes/es_20200806_1.md",
         "/reading/ecmascript6/notes/es_20200806_2.md",
+        "/reading/ecmascript6/notes/es_20200831.md",
       ],
     },
   ],
@@ -43,6 +44,24 @@ module.exports = {
         "/",
       ],
     },
+    {
+      title: "剑指Offer",
+      path: "/programtech/jianzhioffer/",
+      collapsable: false,
+      sidebarDepth: 2,
+      children: [
+        "/programtech/jianzhioffer/notes/cha-zhao.md",
+        "/programtech/jianzhioffer/notes/sort.md",
+        "/programtech/jianzhioffer/notes/shu-xue.md",
+        "/programtech/jianzhioffer/notes/wei-yun-suan.md",
+        "/programtech/jianzhioffer/notes/qiong-ju.md",
+        "/programtech/jianzhioffer/notes/di-gui.md",
+        "/programtech/jianzhioffer/notes/er-fen-fa.md",
+        "/programtech/jianzhioffer/notes/shuang-zhi-zhen.md",
+        "/programtech/jianzhioffer/notes/tree.md",
+        "/programtech/jianzhioffer/notes/bfs.md",
+      ],
+    },
   ],
   "/base/": [
     {
@@ -50,7 +69,9 @@ module.exports = {
       path: "/base/js/",
       collapsable: false,
       sidebarDepth: 2,
-      children: ["/"],
+      children: [
+        "/base/js/notes/base-complete.md",
+      ],
     },
     {
       title: "CSS",

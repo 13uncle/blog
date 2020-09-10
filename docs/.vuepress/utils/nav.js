@@ -48,6 +48,7 @@ module.exports = [
     items: [
       { text: "数据结构和算法", link: "/programtech/ds&al/" },
       { text: "计算机网络", link: "/programtech/http/" },
+      { text: "剑指offer", link: "/programtech/jianzhioffer/" },
     ],
   },
   {
